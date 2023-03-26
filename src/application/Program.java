@@ -36,6 +36,13 @@ public class Program {
 		sellerDao.insert(newSeller);//inserir no banco de dados o novo vendedor
 		System.out.println("Inserted! New id = " + newSeller.getId());
 		
+		System.out.println("\n=== TEST 5: seller update ===");
+		seller = sellerDao.findById(1);
+		seller.setName("Martha Wayne");//setando um novo nome para o vendedor
+		sellerDao.update(seller);
+		System.out.println("Update Completed");
+		
+		
 	}
 
 }
